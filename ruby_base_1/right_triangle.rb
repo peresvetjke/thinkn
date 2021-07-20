@@ -14,12 +14,11 @@ unless (a + b > c) && (b + c > a) && (a + c > b)
 end
 
 arr = [a,b,c].sort!
-s = arr.to_set
 
 puts "Triangle is right." if arr[2]**2 == arr[0]**2 + arr[1]**2
-if s.size == 1
+if arr.uniq.size == 1
   puts "Triangle is equilateral (3 sides have the same length)."
-elsif s.size == 2
+elsif arr.uniq.size == 2
   puts "Triangle is isosceles (2 sides have the same length). "
 end
 
