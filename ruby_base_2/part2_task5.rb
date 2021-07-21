@@ -1,41 +1,13 @@
 puts "Please enter date:"
 print "Year = "
-y = gets.chomp.to_i
+year = gets.chomp.to_i
 print "Month = "
-m = gets.chomp.to_i
+month = gets.chomp.to_i
 print "Day = "
-d = gets.chomp.to_i
+day = gets.chomp.to_i
 
-def leap_check(year)
-  if year % 400 == 0
-    return true
-  elsif (year % 4 == 0) && (year % 100 != 0)
-    return true 
-  else 
-    return false
-  end
-end
+months_days = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ]
+months_days[1] += 1 if (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))
 
-def month_days(month,year)
-  months_arr = [ [1, 31], [2, 28], [3, 31], [4, 30], [5, 31], [6, 30], [7, 31], [8, 31], [9, 30], [10, 31], [11, 30], [12, 31] ]
-  
-  if month == 2
-    return leap_check(year) ? 29 : 28
-  else
-    return months_arr[month-1][1]
-  end
-end
+p months_days.take(month-1).sum + day
 
-def count_days(day,month,year)
-  c = 0
-  i = 1
-
-  while i < month
-    c += month_days(i,year)
-    i+=1
-  end
-  
-  c += day
-end
-
-p count_days(d,m,y)

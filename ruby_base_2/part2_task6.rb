@@ -1,4 +1,4 @@
-cart = Hash.new
+cart = {}
 
 loop do
   print "Product name: "
@@ -16,9 +16,9 @@ end
 puts "cart = #{cart}"
 
 sum = 0
-cart.each do |x, y| 
-  sum += y[:price] * y[:amount]
-  puts "Item: #{x}, price: #{y[:price]}, amount: #{y[:amount]}. Cost - #{y[:price] * y[:amount]}"
+cart.each do |item, params| 
+  sum += params[:price] * params[:amount]
+  puts "Item: #{item}, price: #{params[:price]}, amount: #{params[:amount]}. Cost - #{params[:price] * params[:amount]}"
 end
 
 puts "Total cost: #{sum}"
