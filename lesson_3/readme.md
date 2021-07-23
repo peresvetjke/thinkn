@@ -5,10 +5,10 @@
     Может принимать поезда (по одному за раз)
         train1 = Train.new("name","passenger",4)
     Может возвращать список всех поездов на станции, находящиеся в текущий момент
-        station1.show_trains
+        station1.trains
     Может возвращать список поездов на станции по типу (см. ниже): кол-во грузовых, пассажирских
-        station1.show_trains("passenger")
-        station1.show_trains("freight")
+        station1.trains_by_type("freight")
+        station1.count_trains_by_type("freight")
     Может отправлять поезда (по одному за раз, при этом, поезд удаляется из списка поездов, находящихся на станции).
         station1.departure(train1)
         station2.arrival(train1)
@@ -19,12 +19,11 @@
     Имеет начальную и конечную станцию, а также список промежуточных станций. Начальная и конечная станции указываютсся при создании маршрута, а промежуточные могут добавляться между ними.
         route1 = Route.new(station1, station2)
     Может добавлять промежуточную станцию в список
-        route1.add_point(station3)
+        route1.add_station(station3)
     Может удалять промежуточную станцию из списка
-        route1.remove_point
+        route1.remove_station
     Может выводить список всех станций по-порядку от начальной до конечной
-        route1.show_list
-
+        route1.stations
 
 Класс Train (Поезд):
 

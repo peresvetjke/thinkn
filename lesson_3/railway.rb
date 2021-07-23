@@ -1,154 +1,78 @@
+TYPES = ["passenger", "freight"]
+
 class Station
   attr_accessor :trains
   attr_reader :name
 
+  def self.all
+    @all ||= [ ]
+  end
+
+  def self.each(&proc)
+    @all.each(&proc)
+  end
+
   def initialize(name)
     @name = name
     @trains = []
+    Station.all << self
   end
 
   def arrival(train)
-    self.trains << train unless self.trains.include?(train)
-    train.location = self
-  end
-
-  def show_trains(type="all")
-    raise 'Wrong argument: use Type "passenger", "freight" or no argument (for showing full list)"' if !Train.types.include?(type) && type != "all"
-
-    case type 
-    when "all"
-      puts "Trains at station #{self.name}:"
-      self.trains.each {|train| puts "- #{train.number}"}
-      puts "Total trains amount: #{self.trains.count}"
-    when "passenger"
-      passenger = self.trains.select {|train| train.type == type}
-      puts "Passenger trains at station #{self.name}:"
-      passenger.each {|train| puts "- #{train.number}"}
-      puts "Passenger trains amount: #{passenger.count}"
-    when "freight"
-      freight = self.trains.select {|train| train.type == type}
-      puts "Freight trains at station #{self.name}:"
-      freight.each {|train| puts "- #{train.number}"}
-      puts "Freight trains amount: #{freight.count}"
-    end
+    raise "Train is already at the station." if @trains.include?(train)
+    raise "Train at another station now." if Station.all.select {|station| station.trains.include?(train)}.empty? == false
+    @trains << train
   end
 
   def departure(train)
-    if self.trains.include?(train)
-      self.trains.delete(train)
-      train.location = nil
-    else
-      raise "Train #{train.number} is not at the station #{self.name} now."
-    end
+    raise "Train is not at the station now." if !@trains.include?(train) 
+    @trains.delete(train)
   end
+
+  def trains_by_type(type)
+    raise "Wrong value for Type: can be passenger or freight" if !TYPES.include?(type)
+    return @trains.select {|train| train.type == type}
+  end
+
+  def count_trains_by_type(type)
+    raise "Wrong value for Type: can be passenger or freight" if !TYPES.include?(type)
+    return self.trains_by_type(type).count
+  end
+  
 end
 
 class Route
-  attr_reader :start, :end, :points
-
-  def initialize(station1, station2)
-    @start = station1
-    @end = station2
-    @points = []
+  attr_reader :stations
+  
+  def initialize(station1,station2)
+    @stations = [station1, station2]
   end
 
-  def add_point(station)
-    self.points[self.points.size] = station
+  def add_station(station)
+    @stations.insert(-2,station) 
   end
 
-  def remove_point
-    raise "No point to remove." if self.points.empty?
-    self.points.delete_at(self.points.size-1)
+  def remove_station
+    raise "No station to remove." if @stations.size == 2
+    @stations.delete_at(-2)
   end
 
-  def show_list 
-    puts self.start.name
-    self.points.each {|station| puts station.name}
-    puts self.end.name
-  end
-
-  def next_point(train)
-    case train.current_route_point
-    when "start"
-      return self.points.empty? == true ? "end" : 0
-    when "end"
-      return "start"
-    else
-      if train.current_route_point < self.points.size - 1
-        return train.current_route_point + 1
-      else
-        return "end"
-      end
-    end
-  end
-
-  def prev_point(train)
-    case train.current_route_point
-    when "end"
-      return self.points.empty? == true ? "start" : self.points.size - 1
-    when "start"
-      return "end"
-    else
-      if train.current_route_point > 0
-        return train.current_route_point - 1
-      else
-        return "start"
-      end
-    end
-  end
-
-  def location_of_next_point(train)
-    case self.next_point(train)
-    when "start"
-      return self.start
-    when "end"
-      return self.end
-    else
-      return self.points[self.next_point(train).to_i] #return self.points[self.next_point(train).to_i] 
-    end
-  end
-
-  def location_of_prev_point(train)
-    case self.prev_point(train)
-    when "start"
-      return self.start
-    when "end"
-      return self.end
-    else
-      return self.points[self.prev_point(train).to_i] #return self.points[self.next_point(train).to_i] 
-    end
-  end
-
-  def location_of_current_point(train)
-    case train.current_route_point
-    when "start"
-      return self.start
-    when "end"
-      return self.end
-    else
-      return self.points[train.current_route_point.to_i]
-    end
-  end
 end
 
 class Train
-  attr_reader :speed, :type, :number, :next_station, :prev_station, :types
-  attr_accessor :wagons_amount, :route, :current_route_point, :location
-  @@types = ["passenger", "freight"]
-
+  attr_reader :speed, :type, :number
+  attr_accessor :wagons_amount, :route, :location
+  
 
   def initialize(number, type, wagons_amount)
     @number = number
     @wagons_amount = wagons_amount
     @speed = 0
-    raise "Wrong value for Type: can be passenger or freight" if !@@types.include?(type)
+    @location = nil
+    raise "Wrong value for Type: can be passenger or freight" if !TYPES.include?(type)
     @type = type
-
   end
 
-  def self.types
-    return @@types
-  end
   def increase_speed(increase_delta)
     @speed += increase_delta
   end
@@ -158,63 +82,51 @@ class Train
   end
 
   def attach_wagon
-    raise "Wagon cannot be attached if speed is not 0." if self.speed != 0 
-    self.wagons_amount += 1
+    raise "Wagon cannot be attached if speed is not 0." if @speed != 0 
+    @wagons_amount += 1
   end  
 
   def detach_wagon
-    raise "Wagon cannot be detached if speed is not 0." if self.speed != 0 
-    self.wagons_amount -= 1
+    raise "Wagon cannot be detached if speed is not 0." if @speed != 0 
+    @wagons_amount -= 1
   end  
 
   def assign_route(route)
     @route = route
-    @current_route_point = "start"
-    self.location.departure(self) if self.location != nil
-    self.route.start.arrival(self)
+    @location.departure(self) if @location != nil
+    route.stations[0].arrival(self)
   end
 
-  def prev_station
-    raise "No route assigned to #{self.number}." if self.route == nil
-    return  self.route.location_of_prev_point(self)
+
+  def location
+    Station.all.find {|station| station.trains.include?(self)}    
   end
 
-  def next_station
-    raise "No route assigned to #{self.number}." if self.route == nil
-    return self.route.location_of_next_point(self)
+  def next_station(current_station = self.location)
+    raise "End of the route." if self.route.stations.index(current_station) == self.route.stations.size - 1
+    return self.route.stations[self.route.stations.index(current_station) + 1]
+  end
+
+
+  def prev_station(current_station = self.location)
+    raise "Start of the route." if self.route.stations.index(current_station) == 0
+    return self.route.stations[self.route.stations.index(current_station) - 1]
   end
 
   def move
-    raise "No route assigned to #{self.number}." if self.route == nil
-    self.location.departure(self) if self.location != nil
-    self.next_station.arrival(self)
-    self.current_route_point = self.route.next_point(self)
+    temp_location = self.location
+    raise "End of the route." if self.route.stations.index(temp_location) == self.route.stations.size - 1
+
+    temp_location.departure(self)
+    next_station(temp_location).arrival(self)
   end
 
   def shift
-    raise "No route assigned to #{self.number}." if self.route == nil
-    self.location.departure(self) if self.location != nil
-    self.prev_station.arrival(self)
-    self.current_route_point = self.route.prev_point(self)
+    temp_location = self.location
+    raise "Start of the route." if self.route.stations.index(temp_location) == 0
+
+    temp_location.departure(self)
+    prev_station(temp_location).arrival(self)
   end
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
