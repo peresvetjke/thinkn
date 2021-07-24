@@ -1,5 +1,3 @@
-TYPES = ["passenger", "freight"]
-
 class Station
   attr_accessor :trains
   attr_reader :name
@@ -31,12 +29,12 @@ class Station
 
   def trains_by_type(type)
     raise "Wrong value for Type: can be passenger or freight" if !TYPES.include?(type)
-    return @trains.select {|train| train.type == type}
+    @trains.select {|train| train.type == type}
   end
 
   def count_trains_by_type(type)
     raise "Wrong value for Type: can be passenger or freight" if !TYPES.include?(type)
-    return self.trains_by_type(type).count
+    self.trains_by_type(type).count
   end
   
 end
@@ -60,6 +58,8 @@ class Route
 end
 
 class Train
+TYPES = ["passenger", "freight"]
+
   attr_reader :speed, :type, :number
   attr_accessor :wagons_amount, :route, :location
   
@@ -104,13 +104,13 @@ class Train
 
   def next_station(current_station = self.location)
     raise "End of the route." if self.route.stations.index(current_station) == self.route.stations.size - 1
-    return self.route.stations[self.route.stations.index(current_station) + 1]
+    self.route.stations[self.route.stations.index(current_station) + 1]
   end
 
 
   def prev_station(current_station = self.location)
     raise "Start of the route." if self.route.stations.index(current_station) == 0
-    return self.route.stations[self.route.stations.index(current_station) - 1]
+    self.route.stations[self.route.stations.index(current_station) - 1]
   end
 
   def move
