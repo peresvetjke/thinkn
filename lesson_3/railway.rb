@@ -102,31 +102,31 @@ TYPES = ["passenger", "freight"]
     Station.all.find {|station| station.trains.include?(self)}    
   end
 
-  def next_station(current_station = self.location)
-    raise "End of the route." if self.route.stations.index(current_station) == self.route.stations.size - 1
-    self.route.stations[self.route.stations.index(current_station) + 1]
+  def next_station
+    raise "End of the route." if self.route.stations.index(self.location) == self.route.stations.size - 1
+    self.route.stations[self.route.stations.index(self.location) + 1]
   end
 
 
-  def prev_station(current_station = self.location)
-    raise "Start of the route." if self.route.stations.index(current_station) == 0
-    self.route.stations[self.route.stations.index(current_station) - 1]
+  def prev_station
+    raise "Start of the route." if self.route.stations.index(self.location) == 0
+    self.route.stations[self.route.stations.index(self.location) - 1]
   end
 
   def move
-    temp_location = self.location
-    raise "End of the route." if self.route.stations.index(temp_location) == self.route.stations.size - 1
+    temp_next_station = next_station
+    raise "End of the route." if self.route.stations.index(self.location) == self.route.stations.size - 1
 
-    temp_location.departure(self)
-    next_station(temp_location).arrival(self)
+    self.location.departure(self)
+    temp_next_station.arrival(self)
   end
 
   def shift
-    temp_location = self.location
-    raise "Start of the route." if self.route.stations.index(temp_location) == 0
+    temp_prev_location = prev_station
+    raise "Start of the route." if self.route.stations.index(self.location) == 0
 
-    temp_location.departure(self)
-    prev_station(temp_location).arrival(self)
+    self.location.departure(self)
+    temp_prev_location.arrival(self)
   end
 
 end
