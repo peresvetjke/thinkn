@@ -1,27 +1,21 @@
 class Train
 
-  public # Указанные ниже методы могут вызываться из клиентского кода
+  public # Указанные ниже методы - интерфейс класса
 
-  attr_reader :number, :location, :wagons, :route
+  attr_reader :railway, :number, :location, :wagons, :route
 
-  def self.all
-    @all ||= [ ]
-  end
-
-  def self.each(&proc)
-    @all.each(&proc)
-  end
-
-  def initialize(number)
+  def initialize(railway, number)
     @number = number
     @wagons = []
     @speed = 0
     @location = nil
-    self.class.all << self
+    @railway = railway
+    railway.trains << self
   end
 
   def attach_wagon(wagon)
     raise "Wagon cannot be attached if speed is not 0." if @speed != 0 
+    @wagons << wagon
   end  
 
   def detach_wagon
@@ -36,7 +30,7 @@ class Train
   end
 
   def location
-    Station.all.find {|station| station.trains.include?(self)}    
+    self.railway.stations.find {|station| station.trains.include?(self)}    
   end
 
   def move
@@ -73,8 +67,6 @@ class Train
   def stop
     @speed = 0
   end
-
-
 
 =begin
   next_station и prev_station не должны напрямую вызываться из клиентского кода (они

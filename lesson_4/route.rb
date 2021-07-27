@@ -1,19 +1,11 @@
 class Route
   attr_reader :stations
 
-  public # Указанные ниже методы могут вызываться из клиентского кода
+  public # Указанные ниже методы - интерфейс класса
 
-  def self.all
-    @all ||= [ ]
-  end
-
-  def self.each(&proc)
-    @all.each(&proc)
-  end
-  
-  def initialize(station1,station2)
+  def initialize(railway, station1,station2)
     @stations = [station1, station2]
-    self.class.all << self
+    railway.routes << self
   end
 
   def add_station(station)
