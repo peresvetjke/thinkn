@@ -1,6 +1,6 @@
 class Train
 
-  public # Указанные ниже методы - интерфейс класса
+  # Указанные ниже методы - интерфейс класса
 
   attr_reader :railway, :number, :location, :wagons, :route
 

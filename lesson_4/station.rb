@@ -1,7 +1,7 @@
 class Station
   attr_reader :name, :trains
 
-  public # Указанные ниже методы - интерфейс класса
+  # Указанные ниже методы - интерфейс класса
 
   def initialize(railway, name)
     @name = name

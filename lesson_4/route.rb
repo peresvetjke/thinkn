@@ -1,7 +1,7 @@
 class Route
   attr_reader :stations
 
-  public # Указанные ниже методы - интерфейс класса
+  # Указанные ниже методы - интерфейс класса
 
   def initialize(railway, station1,station2)
     @stations = [station1, station2]
