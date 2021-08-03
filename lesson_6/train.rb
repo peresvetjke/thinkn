@@ -2,11 +2,6 @@ class Train
   include InstanceCounter
   include Production
 
-  # Указанные ниже методы - интерфейс класса
-  #формат номера поезда. Допустимый формат: 
-  #три буквы или цифры в любом порядке, необязательный 
-  #дефис (может быть, а может нет) 
-  #и еще 2 буквы или цифры после дефиса.
   TRAIN_NUMBER_FORMAT = /^([a-zA-Z0-9]{3})?(-)?([a-zA-Z0-9]{2})$/
 
   attr_reader :railway, :number, :location, :wagons, :route
@@ -31,10 +26,6 @@ class Train
     true
   rescue
     false
-  end
-
-  def validate!
-    raise ArgumentError.new("Wrong train number format. Expecting XXX-XX or XX.") if number !~ TRAIN_NUMBER_FORMAT
   end
 
   def attach_wagon(wagon)
@@ -75,14 +66,11 @@ class Train
 
   protected 
 
-=begin
-  Указанные ниже методы не должны вызываться из клиентского кода. 
-  Изменение скорости не входило в требования (задание) к интерфейсу, 
-  вместе с этим по логике изменение скорости может повлиять на успешность 
-  прикрепления вагонов. 
-  Методы пока оставляем, так как они могут пригодится в будущем
-=end
   attr_reader :speed
+
+  def validate!
+    raise ArgumentError.new("Wrong train number format. Expecting XXX-XX or XX.") if number !~ TRAIN_NUMBER_FORMAT
+  end
 
   def increase_speed(increase_delta)
     @speed += increase_delta
@@ -91,14 +79,6 @@ class Train
   def stop
     @speed = 0
   end
-
-=begin
-  next_station и prev_station не должны напрямую вызываться из клиентского кода (они
-  используются внутри других методов класса - move и shift соответственно.
-  Хотя оставить их в public также будет не критично. Но интерфейсом класса они не являются.
-  Плюс вызываться они будут от потомков, а не от данного суперкласса -> protected.
-=end
-
 
   def next_station
     raise "End of the route." if self.route.stations.index(self.location) == self.route.stations.size - 1

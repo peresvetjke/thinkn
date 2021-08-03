@@ -2,10 +2,6 @@ class RailWay
   attr_accessor :stations, :trains, :wagons, :routes
   attr_reader :name
 
-  # Указанные ниже методы - интерфейс класса: 
-  # Это инициализация железной дороги + реализация текстового интерфейса для пользователя.
-  # Можно было в принципе оставить только только main_menu.
-
   def initialize(name)
     @stations = []
     @trains = []
@@ -22,10 +18,6 @@ class RailWay
     false
   end
   
-  def validate!
-    raise ArgumentError.new('Railway name must be have at least 4 characters long.') if name.length < 4
-  end
-
   def main_menu
     puts '---------------------------'
     puts "Main menu:"
@@ -128,8 +120,11 @@ class RailWay
   end
 
   private 
-  # Вызов указанных ниже методов извне данного класса не предполагается.
   
+  def validate!
+    raise ArgumentError.new('Railway name must be have at least 4 characters long.') if name.length < 4
+  end
+
   def create_station
     puts "Enter station name:"
     name = gets.chomp

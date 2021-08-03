@@ -2,8 +2,6 @@ class Station
   include InstanceCounter
   attr_reader :name, :trains
 
-  # Указанные ниже методы - интерфейс класса
-
   def initialize(railway, name)
     @name = name
     validate!
@@ -20,10 +18,6 @@ class Station
     false
   end
   
-  def validate!
-    raise ArgumentError.new('Station name must be have at least 4 characters long.') if name.length < 4
-  end
-
   def arrival(train)
     #raise "Train is already at the station." if @trains.include?(train)
     #raise "Train at another station now." if @railway.stations.select {|station| station.trains.include?(train)}.empty? == false
@@ -35,5 +29,11 @@ class Station
     @trains.delete(train)
   end
   
+  private
+
+  def validate!
+    raise ArgumentError.new('Station name must be have at least 4 characters long.') if name.length < 4
+  end
+
 end
 
