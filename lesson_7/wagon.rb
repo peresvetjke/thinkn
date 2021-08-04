@@ -1,0 +1,13 @@
+class Wagon
+  include InstanceCounter
+  include Production
+
+  attr_accessor :number
+
+  def initialize(railway)
+    railway.wagons << self
+    register_instance #InstanceCounter
+    @number = self.class.instances
+  end
+
+end

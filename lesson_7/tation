@@ -1,0 +1,429 @@
+=> [32m#<Station:0x000055e087549288[0m
+ @name[32m=[0m[31m[1;31m"[0m[31mWashington[1;31m"[0m[31m[0m,
+ @railway[32m=[0m
+  [32m#<RailWay:0x000055e087549490[0m
+   @name[32m=[0m[31m[1;31m"[0m[31mLittle Rock Railroad[1;31m"[0m[31m[0m,
+   @routes[32m=[0m
+    [[32m#<Route:0x000055e087543540[0m
+      @stations[32m=[0m
+       [[32m#<Station:0x000055e087549288[0m ...[32m>[0m,
+        [32m#<Station:0x000055e087548fb8[0m @name[32m=[0m[31m[1;31m"[0m[31mPitsburg[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m,
+        [32m#<Station:0x000055e087548ec8[0m @name[32m=[0m[31m[1;31m"[0m[31mNew York[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m][32m>[0m],
+   @stations[32m=[0m
+    [[32m#<Station:0x000055e087549288[0m ...[32m>[0m,
+     [32m#<Station:0x000055e087548fb8[0m @name[32m=[0m[31m[1;31m"[0m[31mPitsburg[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m,
+     [32m#<Station:0x000055e087548f40[0m @name[32m=[0m[31m[1;31m"[0m[31mLouisville[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m,
+     [32m#<Station:0x000055e087548ec8[0m @name[32m=[0m[31m[1;31m"[0m[31mNew York[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m],
+   @trains[32m=[0m
+    [[32m#<PassengerTrain:0x000055e087548e00[0m
+      @location[32m=[0m[1;36mnil[0m,
+      @number[32m=[0m[31m[1;31m"[0m[31mPas-01[1;31m"[0m[31m[0m,
+      @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+      @speed[32m=[0m[1;34m0[0m,
+      @wagons[32m=[0m
+       [[32m#<PassengerWagon:0x000055e0875484a0[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mPassenger#1[1;31m"[0m[31m[0m,
+         @reserved_seats[32m=[0m[1;34m5[0m,
+         @total_seats[32m=[0m[1;34m20[0m,
+         @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+        [32m#<PassengerWagon:0x000055e087543a40[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mPassenger#2[1;31m"[0m[31m[0m,
+         @reserved_seats[32m=[0m[1;34m15[0m,
+         @total_seats[32m=[0m[1;34m20[0m,
+         @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+        [32m#<PassengerWagon:0x000055e087543680[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mPassenger#3[1;31m"[0m[31m[0m,
+         @reserved_seats[32m=[0m[1;34m0[0m,
+         @total_seats[32m=[0m[1;34m20[0m,
+         @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m][32m>[0m,
+     [32m#<CargoTrain:0x000055e0875431d0[0m
+      @location[32m=[0m[1;36mnil[0m,
+      @number[32m=[0m[31m[1;31m"[0m[31mCar-01[1;31m"[0m[31m[0m,
+      @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+      @route[32m=[0m
+       [32m#<Route:0x000055e087543540[0m
+        @stations[32m=[0m
+         [[32m#<Station:0x000055e087549288[0m ...[32m>[0m,
+          [32m#<Station:0x000055e087548fb8[0m @name[32m=[0m[31m[1;31m"[0m[31mPitsburg[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m,
+          [32m#<Station:0x000055e087548ec8[0m @name[32m=[0m[31m[1;31m"[0m[31mNew York[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m][32m>[0m,
+      @speed[32m=[0m[1;34m0[0m,
+      @wagons[32m=[0m
+       [[32m#<CargoWagon:0x000055e087542fa0[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mCargo#1[1;31m"[0m[31m[0m,
+         @reserved_volume[32m=[0m[1;34m0[0m,
+         @total_volume[32m=[0m[1;34m100[0m,
+         @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m][32m>[0m,
+     [32m#<CargoTrain:0x000055e087542d20[0m
+      @location[32m=[0m[1;36mnil[0m,
+      @number[32m=[0m[31m[1;31m"[0m[31mCar-02[1;31m"[0m[31m[0m,
+      @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+      @speed[32m=[0m[1;34m0[0m,
+      @wagons[32m=[0m
+       [[32m#<CargoWagon:0x000055e087542c58[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mCargo#2[1;31m"[0m[31m[0m,
+         @reserved_volume[32m=[0m[1;34m40[0m,
+         @total_volume[32m=[0m[1;34m100[0m,
+         @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m][32m>[0m],
+   @wagons[32m=[0m
+    [[32m#<PassengerWagon:0x000055e0875484a0[0m
+      @number[32m=[0m[31m[1;31m"[0m[31mPassenger#1[1;31m"[0m[31m[0m,
+      @reserved_seats[32m=[0m[1;34m5[0m,
+      @total_seats[32m=[0m[1;34m20[0m,
+      @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+     [32m#<PassengerWagon:0x000055e087543a40[0m
+      @number[32m=[0m[31m[1;31m"[0m[31mPassenger#2[1;31m"[0m[31m[0m,
+      @reserved_seats[32m=[0m[1;34m15[0m,
+      @total_seats[32m=[0m[1;34m20[0m,
+      @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+     [32m#<PassengerWagon:0x000055e087543680[0m
+      @number[32m=[0m[31m[1;31m"[0m[31mPassenger#3[1;31m"[0m[31m[0m,
+      @reserved_seats[32m=[0m[1;34m0[0m,
+      @total_seats[32m=[0m[1;34m20[0m,
+      @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+     [32m#<CargoWagon:0x000055e087542fa0[0m @number[32m=[0m[31m[1;31m"[0m[31mCargo#1[1;31m"[0m[31m[0m, @reserved_volume[32m=[0m[1;34m0[0m, @total_volume[32m=[0m[1;34m100[0m, @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m,
+     [32m#<CargoWagon:0x000055e087542c58[0m
+      @number[32m=[0m[31m[1;31m"[0m[31mCargo#2[1;31m"[0m[31m[0m,
+      @reserved_volume[32m=[0m[1;34m40[0m,
+      @total_volume[32m=[0m[1;34m100[0m,
+      @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m][32m>[0m,
+ @trains[32m=[0m
+  [[32m#<PassengerTrain:0x000055e087548e00[0m
+    @location[32m=[0m[1;36mnil[0m,
+    @number[32m=[0m[31m[1;31m"[0m[31mPas-01[1;31m"[0m[31m[0m,
+    @railway[32m=[0m
+     [32m#<RailWay:0x000055e087549490[0m
+      @name[32m=[0m[31m[1;31m"[0m[31mLittle Rock Railroad[1;31m"[0m[31m[0m,
+      @routes[32m=[0m
+       [[32m#<Route:0x000055e087543540[0m
+         @stations[32m=[0m
+          [[32m#<Station:0x000055e087549288[0m ...[32m>[0m,
+           [32m#<Station:0x000055e087548fb8[0m @name[32m=[0m[31m[1;31m"[0m[31mPitsburg[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m,
+           [32m#<Station:0x000055e087548ec8[0m
+            @name[32m=[0m[31m[1;31m"[0m[31mNew York[1;31m"[0m[31m[0m,
+            @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+            @trains[32m=[0m[][32m>[0m][32m>[0m],
+      @stations[32m=[0m
+       [[32m#<Station:0x000055e087549288[0m ...[32m>[0m,
+        [32m#<Station:0x000055e087548fb8[0m @name[32m=[0m[31m[1;31m"[0m[31mPitsburg[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m,
+        [32m#<Station:0x000055e087548f40[0m @name[32m=[0m[31m[1;31m"[0m[31mLouisville[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m,
+        [32m#<Station:0x000055e087548ec8[0m @name[32m=[0m[31m[1;31m"[0m[31mNew York[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m],
+      @trains[32m=[0m
+       [[32m#<PassengerTrain:0x000055e087548e00[0m ...[32m>[0m,
+        [32m#<CargoTrain:0x000055e0875431d0[0m
+         @location[32m=[0m[1;36mnil[0m,
+         @number[32m=[0m[31m[1;31m"[0m[31mCar-01[1;31m"[0m[31m[0m,
+         @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+         @route[32m=[0m
+          [32m#<Route:0x000055e087543540[0m
+           @stations[32m=[0m
+            [[32m#<Station:0x000055e087549288[0m ...[32m>[0m,
+             [32m#<Station:0x000055e087548fb8[0m @name[32m=[0m[31m[1;31m"[0m[31mPitsburg[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m,
+             [32m#<Station:0x000055e087548ec8[0m
+              @name[32m=[0m[31m[1;31m"[0m[31mNew York[1;31m"[0m[31m[0m,
+              @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+              @trains[32m=[0m[][32m>[0m][32m>[0m,
+         @speed[32m=[0m[1;34m0[0m,
+         @wagons[32m=[0m
+          [[32m#<CargoWagon:0x000055e087542fa0[0m
+            @number[32m=[0m[31m[1;31m"[0m[31mCargo#1[1;31m"[0m[31m[0m,
+            @reserved_volume[32m=[0m[1;34m0[0m,
+            @total_volume[32m=[0m[1;34m100[0m,
+            @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m][32m>[0m,
+        [32m#<CargoTrain:0x000055e087542d20[0m
+         @location[32m=[0m[1;36mnil[0m,
+         @number[32m=[0m[31m[1;31m"[0m[31mCar-02[1;31m"[0m[31m[0m,
+         @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+         @speed[32m=[0m[1;34m0[0m,
+         @wagons[32m=[0m
+          [[32m#<CargoWagon:0x000055e087542c58[0m
+            @number[32m=[0m[31m[1;31m"[0m[31mCargo#2[1;31m"[0m[31m[0m,
+            @reserved_volume[32m=[0m[1;34m40[0m,
+            @total_volume[32m=[0m[1;34m100[0m,
+            @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m][32m>[0m],
+      @wagons[32m=[0m
+       [[32m#<PassengerWagon:0x000055e0875484a0[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mPassenger#1[1;31m"[0m[31m[0m,
+         @reserved_seats[32m=[0m[1;34m5[0m,
+         @total_seats[32m=[0m[1;34m20[0m,
+         @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+        [32m#<PassengerWagon:0x000055e087543a40[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mPassenger#2[1;31m"[0m[31m[0m,
+         @reserved_seats[32m=[0m[1;34m15[0m,
+         @total_seats[32m=[0m[1;34m20[0m,
+         @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+        [32m#<PassengerWagon:0x000055e087543680[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mPassenger#3[1;31m"[0m[31m[0m,
+         @reserved_seats[32m=[0m[1;34m0[0m,
+         @total_seats[32m=[0m[1;34m20[0m,
+         @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+        [32m#<CargoWagon:0x000055e087542fa0[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mCargo#1[1;31m"[0m[31m[0m,
+         @reserved_volume[32m=[0m[1;34m0[0m,
+         @total_volume[32m=[0m[1;34m100[0m,
+         @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m,
+        [32m#<CargoWagon:0x000055e087542c58[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mCargo#2[1;31m"[0m[31m[0m,
+         @reserved_volume[32m=[0m[1;34m40[0m,
+         @total_volume[32m=[0m[1;34m100[0m,
+         @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m][32m>[0m,
+    @speed[32m=[0m[1;34m0[0m,
+    @wagons[32m=[0m
+     [[32m#<PassengerWagon:0x000055e0875484a0[0m
+       @number[32m=[0m[31m[1;31m"[0m[31mPassenger#1[1;31m"[0m[31m[0m,
+       @reserved_seats[32m=[0m[1;34m5[0m,
+       @total_seats[32m=[0m[1;34m20[0m,
+       @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+      [32m#<PassengerWagon:0x000055e087543a40[0m
+       @number[32m=[0m[31m[1;31m"[0m[31mPassenger#2[1;31m"[0m[31m[0m,
+       @reserved_seats[32m=[0m[1;34m15[0m,
+       @total_seats[32m=[0m[1;34m20[0m,
+       @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+      [32m#<PassengerWagon:0x000055e087543680[0m
+       @number[32m=[0m[31m[1;31m"[0m[31mPassenger#3[1;31m"[0m[31m[0m,
+       @reserved_seats[32m=[0m[1;34m0[0m,
+       @total_seats[32m=[0m[1;34m20[0m,
+       @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m][32m>[0m,
+   [32m#<CargoTrain:0x000055e0875431d0[0m
+    @location[32m=[0m[1;36mnil[0m,
+    @number[32m=[0m[31m[1;31m"[0m[31mCar-01[1;31m"[0m[31m[0m,
+    @railway[32m=[0m
+     [32m#<RailWay:0x000055e087549490[0m
+      @name[32m=[0m[31m[1;31m"[0m[31mLittle Rock Railroad[1;31m"[0m[31m[0m,
+      @routes[32m=[0m
+       [[32m#<Route:0x000055e087543540[0m
+         @stations[32m=[0m
+          [[32m#<Station:0x000055e087549288[0m ...[32m>[0m,
+           [32m#<Station:0x000055e087548fb8[0m @name[32m=[0m[31m[1;31m"[0m[31mPitsburg[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m,
+           [32m#<Station:0x000055e087548ec8[0m
+            @name[32m=[0m[31m[1;31m"[0m[31mNew York[1;31m"[0m[31m[0m,
+            @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+            @trains[32m=[0m[][32m>[0m][32m>[0m],
+      @stations[32m=[0m
+       [[32m#<Station:0x000055e087549288[0m ...[32m>[0m,
+        [32m#<Station:0x000055e087548fb8[0m @name[32m=[0m[31m[1;31m"[0m[31mPitsburg[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m,
+        [32m#<Station:0x000055e087548f40[0m @name[32m=[0m[31m[1;31m"[0m[31mLouisville[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m,
+        [32m#<Station:0x000055e087548ec8[0m @name[32m=[0m[31m[1;31m"[0m[31mNew York[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m],
+      @trains[32m=[0m
+       [[32m#<PassengerTrain:0x000055e087548e00[0m
+         @location[32m=[0m[1;36mnil[0m,
+         @number[32m=[0m[31m[1;31m"[0m[31mPas-01[1;31m"[0m[31m[0m,
+         @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+         @speed[32m=[0m[1;34m0[0m,
+         @wagons[32m=[0m
+          [[32m#<PassengerWagon:0x000055e0875484a0[0m
+            @number[32m=[0m[31m[1;31m"[0m[31mPassenger#1[1;31m"[0m[31m[0m,
+            @reserved_seats[32m=[0m[1;34m5[0m,
+            @total_seats[32m=[0m[1;34m20[0m,
+            @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+           [32m#<PassengerWagon:0x000055e087543a40[0m
+            @number[32m=[0m[31m[1;31m"[0m[31mPassenger#2[1;31m"[0m[31m[0m,
+            @reserved_seats[32m=[0m[1;34m15[0m,
+            @total_seats[32m=[0m[1;34m20[0m,
+            @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+           [32m#<PassengerWagon:0x000055e087543680[0m
+            @number[32m=[0m[31m[1;31m"[0m[31mPassenger#3[1;31m"[0m[31m[0m,
+            @reserved_seats[32m=[0m[1;34m0[0m,
+            @total_seats[32m=[0m[1;34m20[0m,
+            @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m][32m>[0m,
+        [32m#<CargoTrain:0x000055e0875431d0[0m ...[32m>[0m,
+        [32m#<CargoTrain:0x000055e087542d20[0m
+         @location[32m=[0m[1;36mnil[0m,
+         @number[32m=[0m[31m[1;31m"[0m[31mCar-02[1;31m"[0m[31m[0m,
+         @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+         @speed[32m=[0m[1;34m0[0m,
+         @wagons[32m=[0m
+          [[32m#<CargoWagon:0x000055e087542c58[0m
+            @number[32m=[0m[31m[1;31m"[0m[31mCargo#2[1;31m"[0m[31m[0m,
+            @reserved_volume[32m=[0m[1;34m40[0m,
+            @total_volume[32m=[0m[1;34m100[0m,
+            @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m][32m>[0m],
+      @wagons[32m=[0m
+       [[32m#<PassengerWagon:0x000055e0875484a0[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mPassenger#1[1;31m"[0m[31m[0m,
+         @reserved_seats[32m=[0m[1;34m5[0m,
+         @total_seats[32m=[0m[1;34m20[0m,
+         @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+        [32m#<PassengerWagon:0x000055e087543a40[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mPassenger#2[1;31m"[0m[31m[0m,
+         @reserved_seats[32m=[0m[1;34m15[0m,
+         @total_seats[32m=[0m[1;34m20[0m,
+         @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+        [32m#<PassengerWagon:0x000055e087543680[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mPassenger#3[1;31m"[0m[31m[0m,
+         @reserved_seats[32m=[0m[1;34m0[0m,
+         @total_seats[32m=[0m[1;34m20[0m,
+         @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+        [32m#<CargoWagon:0x000055e087542fa0[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mCargo#1[1;31m"[0m[31m[0m,
+         @reserved_volume[32m=[0m[1;34m0[0m,
+         @total_volume[32m=[0m[1;34m100[0m,
+         @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m,
+        [32m#<CargoWagon:0x000055e087542c58[0m
+         @number[32m=[0m[31m[1;31m"[0m[31mCargo#2[1;31m"[0m[31m[0m,
+         @reserved_volume[32m=[0m[1;34m40[0m,
+         @total_volume[32m=[0m[1;34m100[0m,
+         @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m][32m>[0m,
+    @route[32m=[0m
+     [32m#<Route:0x000055e087543540[0m
+      @stations[32m=[0m
+       [[32m#<Station:0x000055e087549288[0m ...[32m>[0m,
+        [32m#<Station:0x000055e087548fb8[0m
+         @name[32m=[0m[31m[1;31m"[0m[31mPitsburg[1;31m"[0m[31m[0m,
+         @railway[32m=[0m
+          [32m#<RailWay:0x000055e087549490[0m
+           @name[32m=[0m[31m[1;31m"[0m[31mLittle Rock Railroad[1;31m"[0m[31m[0m,
+           @routes[32m=[0m[[32m#<Route:0x000055e087543540[0m ...[32m>[0m],
+           @stations[32m=[0m
+            [[32m#<Station:0x000055e087549288[0m ...[32m>[0m,
+             [32m#<Station:0x000055e087548fb8[0m ...[32m>[0m,
+             [32m#<Station:0x000055e087548f40[0m
+              @name[32m=[0m[31m[1;31m"[0m[31mLouisville[1;31m"[0m[31m[0m,
+              @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+              @trains[32m=[0m[][32m>[0m,
+             [32m#<Station:0x000055e087548ec8[0m
+              @name[32m=[0m[31m[1;31m"[0m[31mNew York[1;31m"[0m[31m[0m,
+              @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+              @trains[32m=[0m[][32m>[0m],
+           @trains[32m=[0m
+            [[32m#<PassengerTrain:0x000055e087548e00[0m
+              @location[32m=[0m[1;36mnil[0m,
+              @number[32m=[0m[31m[1;31m"[0m[31mPas-01[1;31m"[0m[31m[0m,
+              @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+              @speed[32m=[0m[1;34m0[0m,
+              @wagons[32m=[0m
+               [[32m#<PassengerWagon:0x000055e0875484a0[0m
+                 @number[32m=[0m[31m[1;31m"[0m[31mPassenger#1[1;31m"[0m[31m[0m,
+                 @reserved_seats[32m=[0m[1;34m5[0m,
+                 @total_seats[32m=[0m[1;34m20[0m,
+                 @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+                [32m#<PassengerWagon:0x000055e087543a40[0m
+                 @number[32m=[0m[31m[1;31m"[0m[31mPassenger#2[1;31m"[0m[31m[0m,
+                 @reserved_seats[32m=[0m[1;34m15[0m,
+                 @total_seats[32m=[0m[1;34m20[0m,
+                 @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+                [32m#<PassengerWagon:0x000055e087543680[0m
+                 @number[32m=[0m[31m[1;31m"[0m[31mPassenger#3[1;31m"[0m[31m[0m,
+                 @reserved_seats[32m=[0m[1;34m0[0m,
+                 @total_seats[32m=[0m[1;34m20[0m,
+                 @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m][32m>[0m,
+             [32m#<CargoTrain:0x000055e0875431d0[0m ...[32m>[0m,
+             [32m#<CargoTrain:0x000055e087542d20[0m
+              @location[32m=[0m[1;36mnil[0m,
+              @number[32m=[0m[31m[1;31m"[0m[31mCar-02[1;31m"[0m[31m[0m,
+              @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+              @speed[32m=[0m[1;34m0[0m,
+              @wagons[32m=[0m
+               [[32m#<CargoWagon:0x000055e087542c58[0m
+                 @number[32m=[0m[31m[1;31m"[0m[31mCargo#2[1;31m"[0m[31m[0m,
+                 @reserved_volume[32m=[0m[1;34m40[0m,
+                 @total_volume[32m=[0m[1;34m100[0m,
+                 @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m][32m>[0m],
+           @wagons[32m=[0m
+            [[32m#<PassengerWagon:0x000055e0875484a0[0m
+              @number[32m=[0m[31m[1;31m"[0m[31mPassenger#1[1;31m"[0m[31m[0m,
+              @reserved_seats[32m=[0m[1;34m5[0m,
+              @total_seats[32m=[0m[1;34m20[0m,
+              @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+             [32m#<PassengerWagon:0x000055e087543a40[0m
+              @number[32m=[0m[31m[1;31m"[0m[31mPassenger#2[1;31m"[0m[31m[0m,
+              @reserved_seats[32m=[0m[1;34m15[0m,
+              @total_seats[32m=[0m[1;34m20[0m,
+              @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+             [32m#<PassengerWagon:0x000055e087543680[0m
+              @number[32m=[0m[31m[1;31m"[0m[31mPassenger#3[1;31m"[0m[31m[0m,
+              @reserved_seats[32m=[0m[1;34m0[0m,
+              @total_seats[32m=[0m[1;34m20[0m,
+              @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+             [32m#<CargoWagon:0x000055e087542fa0[0m
+              @number[32m=[0m[31m[1;31m"[0m[31mCargo#1[1;31m"[0m[31m[0m,
+              @reserved_volume[32m=[0m[1;34m0[0m,
+              @total_volume[32m=[0m[1;34m100[0m,
+              @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m,
+             [32m#<CargoWagon:0x000055e087542c58[0m
+              @number[32m=[0m[31m[1;31m"[0m[31mCargo#2[1;31m"[0m[31m[0m,
+              @reserved_volume[32m=[0m[1;34m40[0m,
+              @total_volume[32m=[0m[1;34m100[0m,
+              @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m][32m>[0m,
+         @trains[32m=[0m[][32m>[0m,
+        [32m#<Station:0x000055e087548ec8[0m
+         @name[32m=[0m[31m[1;31m"[0m[31mNew York[1;31m"[0m[31m[0m,
+         @railway[32m=[0m
+          [32m#<RailWay:0x000055e087549490[0m
+           @name[32m=[0m[31m[1;31m"[0m[31mLittle Rock Railroad[1;31m"[0m[31m[0m,
+           @routes[32m=[0m[[32m#<Route:0x000055e087543540[0m ...[32m>[0m],
+           @stations[32m=[0m
+            [[32m#<Station:0x000055e087549288[0m ...[32m>[0m,
+             [32m#<Station:0x000055e087548fb8[0m @name[32m=[0m[31m[1;31m"[0m[31mPitsburg[1;31m"[0m[31m[0m, @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m, @trains[32m=[0m[][32m>[0m,
+             [32m#<Station:0x000055e087548f40[0m
+              @name[32m=[0m[31m[1;31m"[0m[31mLouisville[1;31m"[0m[31m[0m,
+              @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+              @trains[32m=[0m[][32m>[0m,
+             [32m#<Station:0x000055e087548ec8[0m ...[32m>[0m],
+           @trains[32m=[0m
+            [[32m#<PassengerTrain:0x000055e087548e00[0m
+              @location[32m=[0m[1;36mnil[0m,
+              @number[32m=[0m[31m[1;31m"[0m[31mPas-01[1;31m"[0m[31m[0m,
+              @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+              @speed[32m=[0m[1;34m0[0m,
+              @wagons[32m=[0m
+               [[32m#<PassengerWagon:0x000055e0875484a0[0m
+                 @number[32m=[0m[31m[1;31m"[0m[31mPassenger#1[1;31m"[0m[31m[0m,
+                 @reserved_seats[32m=[0m[1;34m5[0m,
+                 @total_seats[32m=[0m[1;34m20[0m,
+                 @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+                [32m#<PassengerWagon:0x000055e087543a40[0m
+                 @number[32m=[0m[31m[1;31m"[0m[31mPassenger#2[1;31m"[0m[31m[0m,
+                 @reserved_seats[32m=[0m[1;34m15[0m,
+                 @total_seats[32m=[0m[1;34m20[0m,
+                 @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+                [32m#<PassengerWagon:0x000055e087543680[0m
+                 @number[32m=[0m[31m[1;31m"[0m[31mPassenger#3[1;31m"[0m[31m[0m,
+                 @reserved_seats[32m=[0m[1;34m0[0m,
+                 @total_seats[32m=[0m[1;34m20[0m,
+                 @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m][32m>[0m,
+             [32m#<CargoTrain:0x000055e0875431d0[0m ...[32m>[0m,
+             [32m#<CargoTrain:0x000055e087542d20[0m
+              @location[32m=[0m[1;36mnil[0m,
+              @number[32m=[0m[31m[1;31m"[0m[31mCar-02[1;31m"[0m[31m[0m,
+              @railway[32m=[0m[32m#<RailWay:0x000055e087549490[0m ...[32m>[0m,
+              @speed[32m=[0m[1;34m0[0m,
+              @wagons[32m=[0m
+               [[32m#<CargoWagon:0x000055e087542c58[0m
+                 @number[32m=[0m[31m[1;31m"[0m[31mCargo#2[1;31m"[0m[31m[0m,
+                 @reserved_volume[32m=[0m[1;34m40[0m,
+                 @total_volume[32m=[0m[1;34m100[0m,
+                 @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m][32m>[0m],
+           @wagons[32m=[0m
+            [[32m#<PassengerWagon:0x000055e0875484a0[0m
+              @number[32m=[0m[31m[1;31m"[0m[31mPassenger#1[1;31m"[0m[31m[0m,
+              @reserved_seats[32m=[0m[1;34m5[0m,
+              @total_seats[32m=[0m[1;34m20[0m,
+              @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+             [32m#<PassengerWagon:0x000055e087543a40[0m
+              @number[32m=[0m[31m[1;31m"[0m[31mPassenger#2[1;31m"[0m[31m[0m,
+              @reserved_seats[32m=[0m[1;34m15[0m,
+              @total_seats[32m=[0m[1;34m20[0m,
+              @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+             [32m#<PassengerWagon:0x000055e087543680[0m
+              @number[32m=[0m[31m[1;31m"[0m[31mPassenger#3[1;31m"[0m[31m[0m,
+              @reserved_seats[32m=[0m[1;34m0[0m,
+              @total_seats[32m=[0m[1;34m20[0m,
+              @vacant_seats[32m=[0m[1;34m20[0m[32m>[0m,
+             [32m#<CargoWagon:0x000055e087542fa0[0m
+              @number[32m=[0m[31m[1;31m"[0m[31mCargo#1[1;31m"[0m[31m[0m,
+              @reserved_volume[32m=[0m[1;34m0[0m,
+              @total_volume[32m=[0m[1;34m100[0m,
+              @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m,
+             [32m#<CargoWagon:0x000055e087542c58[0m
+              @number[32m=[0m[31m[1;31m"[0m[31mCargo#2[1;31m"[0m[31m[0m,
+              @reserved_volume[32m=[0m[1;34m40[0m,
+              @total_volume[32m=[0m[1;34m100[0m,
+              @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m][32m>[0m,
+         @trains[32m=[0m[][32m>[0m][32m>[0m,
+    @speed[32m=[0m[1;34m0[0m,
+    @wagons[32m=[0m
+     [[32m#<CargoWagon:0x000055e087542fa0[0m
+       @number[32m=[0m[31m[1;31m"[0m[31mCargo#1[1;31m"[0m[31m[0m,
+       @reserved_volume[32m=[0m[1;34m0[0m,
+       @total_volume[32m=[0m[1;34m100[0m,
+       @vacant_volume[32m=[0m[1;34m100[0m[32m>[0m][32m>[0m][32m>[0m
