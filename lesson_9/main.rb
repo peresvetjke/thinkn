@@ -83,7 +83,13 @@ def test_data_meta(railway)
     puts "Checking the message..."
     puts "#{e}" 
   end
-
+  puts "Checking vlidate! with wrong type of value..."
+  begin
+    passenger_wagon3 = PassengerWagon.new(railway, -20) 
+  rescue StandardError => e
+    puts "Checking the message..."
+    puts "#{e}" 
+  end
 end
 
 
